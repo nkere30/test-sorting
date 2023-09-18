@@ -1,6 +1,6 @@
 package com.epam.rd.autotasks;
 
-import static org.junit.Assert.*;
+import  org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -20,14 +20,14 @@ public class SortingTest {
         int[] expected = {};
         int expectedSize = 0;
         sorting.sort(expected);
-        assertEquals(expected.length, expectedSize);
+        Assert.assertEquals(expected.length, expectedSize);
         Exception ex = null;
         try{
             sorting.sort(expected);
         }catch (Exception e){
             ex = e;
         }
-        assertNull(ex);
+        Assert.assertNull(ex);
     }
 
     @Test
@@ -36,8 +36,8 @@ public class SortingTest {
         int expectedElement = expected[0];
         int expectedLength = 1;
         sorting.sort(expected);
-        assertEquals(expected.length, expectedLength);
-        assertEquals(expectedElement, expected[0]);
+        Assert.assertEquals(expected.length, expectedLength);
+        Assert.assertEquals(expectedElement, expected[0]);
     }
 
     @Test
@@ -45,7 +45,7 @@ public class SortingTest {
         int[] actual = {5, 7, 9, 13, 27, 30};
         int [] expected = Arrays.copyOf(actual,actual.length);
         sorting.sort(actual);
-        assertArrayEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -54,6 +54,6 @@ public class SortingTest {
         int[] sortedArray = Arrays.copyOf(sampleArray,sampleArray.length);
         Arrays.sort(sortedArray);
         sorting.sort(sampleArray);
-        assertArrayEquals(sortedArray, sampleArray);
+        Assert.assertArrayEquals(sortedArray, sampleArray);
     }
 }
