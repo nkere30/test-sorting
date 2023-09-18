@@ -1,5 +1,6 @@
 package com.epam.rd.autotasks;
 
+import static org.junit.Assert.*;
 import org.junit.Test;
 
 import java.util.Arrays;
