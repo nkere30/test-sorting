@@ -19,14 +19,14 @@ public class SortingTest {
         int[] expected = {};
         int expectedSize = 0;
         sorting.sort(expected);
-        Assert.assertEquals(expected.length, expectedSize);
+        assertEquals(expected.length, expectedSize);
         Exception ex = null;
         try{
             sorting.sort(expected);
         }catch (Exception e){
             ex = e;
         }
-        Assert.assertNull(ex);
+        assertNull(ex);
     }
 
     @Test
@@ -35,8 +35,8 @@ public class SortingTest {
         int expectedElement = expected[0];
         int expectedLength = 1;
         sorting.sort(expected);
-        Assert.assertEquals(expected.length, expectedLength);
-        Assert.assertEquals(expectedElement, expected[0]);
+        assertEquals(expected.length, expectedLength);
+        assertEquals(expectedElement, expected[0]);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class SortingTest {
         int[] actual = {5, 7, 9, 13, 27, 30};
         int [] expected = Arrays.copyOf(actual,actual.length);
         sorting.sort(actual);
-        Assert.assertArrayEquals(expected, actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -53,6 +53,6 @@ public class SortingTest {
         int[] sortedArray = Arrays.copyOf(sampleArray,sampleArray.length);
         Arrays.sort(sortedArray);
         sorting.sort(sampleArray);
-        Assert.assertArrayEquals(sortedArray, sampleArray);
+        assertArrayEquals(sortedArray, sampleArray);
     }
 }
